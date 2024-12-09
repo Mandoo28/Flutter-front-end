@@ -39,23 +39,9 @@ class _SplashScreenState extends State<SplashScreen> {
             const Center(
               child: Image(
                 fit: BoxFit.contain,
-                image: AssetImage("lib/assets/logo.png"),
+                image: AssetImage("lib/assets/LOGOnew.png"),
               ),
-            ),
-            Text(
-              "Rise",
-              style: Theme.of(context)
-                  .textTheme
-                  .displayLarge!
-                  .copyWith(color: AppColors.whiteColor),
-            ),
-            Text(
-              "Real Estate",
-              style: Theme.of(context)
-                  .textTheme
-                  .displayLarge!
-                  .copyWith(color: AppColors.whiteColor),
-            ),
+            )
           ],
         ),
       ),

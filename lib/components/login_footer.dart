@@ -40,7 +40,7 @@ class LoginFooter extends StatelessWidget {
                   width: 35,
                   height: 35,
                   fit: BoxFit.contain,
-                  image: AssetImage("lib/assets/icons/facebook.png"),
+                  image: AssetImage("lib/assets/icons/apple.png"),
                 ),
               ),
             ),
@@ -52,7 +52,7 @@ class LoginFooter extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             Text(
-              "Dont't have an account?",
+              "ليس لدي حساب? ",
               style: Theme.of(context).textTheme.titleMedium,
             ),
             InkWell(
@@ -60,7 +60,7 @@ class LoginFooter extends StatelessWidget {
                 Navigator.pushNamed(context, RoutesName.signupScreen);
               },
               child: Text(
-                " Register",
+                "انشاء حساب",
                 style: Theme.of(context).textTheme.titleMedium!.copyWith(
                     color: AppColors.textPrimary, fontWeight: FontWeight.bold),
               ),

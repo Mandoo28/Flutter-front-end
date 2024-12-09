@@ -35,7 +35,7 @@ class OnboardView extends StatelessWidget {
                 width: 80,
                 height: 80,
                 fit: BoxFit.cover,
-                image: AssetImage("lib/assets/logo.png"),
+                image: AssetImage("lib/assets/LOGOnew.png"),
               ),
               AppButton(
                 onPress: () {

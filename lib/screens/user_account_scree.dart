@@ -15,25 +15,28 @@ class _UserAccountScreenState extends State<UserAccountScreen> {
   @override
   Widget build(BuildContext context) {
     final height = MediaQuery.of(context).size.height * 1;
-    return Screen(
-      isBackButton: true,
-      isBottomTab: false,
-      child: Column(
-        children: [
-          const HeaderTitle(
-            title: "Fill your",
-            title1: "information below",
-            bottomTitle: "You can edit this later on your account setting.",
-            subtitle: "",
-            isUnderTitle: true,
-          ),
-          Gap(
-            isWidth: false,
-            isHeight: true,
-            height: height * 0.03,
-          ),
-          const AccountForm()
-        ],
+    return Directionality(
+      textDirection: TextDirection.rtl,
+      child: Screen(
+        isBackButton: true,
+        isBottomTab: false,
+        child: Column(
+          children: [
+            const HeaderTitle(
+              title: "اكمل",
+              title1: "معلوماتك",
+              bottomTitle: "يمكنك تعديل هذا لاحقًا في إعدادات حسابك",
+              subtitle: "",
+              isUnderTitle: true,
+            ),
+            Gap(
+              isWidth: false,
+              isHeight: true,
+              height: height * 0.03,
+            ),
+            const AccountForm()
+          ],
+        ),
       ),
     );
   }

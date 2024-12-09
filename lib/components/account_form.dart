@@ -107,14 +107,14 @@ class _AccountFormState extends State<AccountForm> {
                   keyBoardType: TextInputType.text,
                   obscureText: false,
                   isFilled: true,
-                  hinit: "Enter fullname",
+                  hinit: "أدخل الاسم الكامل",
                   leftIcon: true,
                   icon: const Icon(Icons.man),
                   onValidator: (value) {
                     if (value.isEmpty)
-                      return 'Enter fullname';
+                      return 'أدخل الاسم الكامل';
                     else if (value.length < 3)
-                      return "Full name at least 3 characters";
+                      return "الاسم الكامل يجب أن يكون على الأقل 3 أحرف";
                   }),
               Gap(isWidth: false, isHeight: true, height: height * 0.019),
               AppInput(
@@ -126,14 +126,14 @@ class _AccountFormState extends State<AccountForm> {
                   keyBoardType: TextInputType.emailAddress,
                   obscureText: false,
                   isFilled: true,
-                  hinit: "Enter Email",
+                  hinit: "أدخل البريد الإلكتروني",
                   leftIcon: true,
                   icon: const Icon(Icons.email),
                   onValidator: (value) {
                     if (value.isEmpty)
-                      return 'Enter email';
+                      return 'أدخل البريد الإلكتروني';
                     else if (!helper.emailValid(value))
-                      return "Enter invalid email";
+                      return "أدخل بريد إلكتروني غير صالح";
                   }),
               Gap(isWidth: false, isHeight: true, height: height * 0.019),
               AppInput(
@@ -144,18 +144,18 @@ class _AccountFormState extends State<AccountForm> {
                   },
                   keyBoardType: TextInputType.phone,
                   obscureText: false,
-                  hinit: "Enter Phone Number",
+                  hinit: "أدخل رقم الهاتف",
                   leftIcon: true,
                   icon: const Icon(Icons.phone),
                   isFilled: true,
                   onValidator: (value) {
-                    if (value.isEmpty) return 'Enter Phonenumber';
+                    if (value.isEmpty) return 'أدخل رقم الهاتف';
                   }),
             ],
           ),
         ),
         Gap(isWidth: false, isHeight: true, height: height * 0.09),
-        const BottomSheetModal(title: "Next", height: 65),
+        const BottomSheetModal(title: "التالي", height: 65),
       ],
     );
   }

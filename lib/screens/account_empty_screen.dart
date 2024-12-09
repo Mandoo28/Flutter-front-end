@@ -39,89 +39,92 @@ class _AccountEmptyScreenState extends State<AccountEmptyScreen> {
         elevation: 0,
       ),
       body: SafeArea(
-        child: AppPadding(
-            padddingValue: 15,
-            child: Column(
-              children: [
-                const HeaderTitle(
-                  title: "Add your ",
-                  bottomTitle:
-                      "You can edit this later on your account setting.",
-                  subtitle: "location",
-                ),
-                Gap(isWidth: false, isHeight: true, height: height * 0.03),
-                Container(
-                  width: double.infinity,
-                  height: height * 0.35,
-                  decoration:
-                      BoxDecoration(borderRadius: BorderRadius.circular(15)),
-                  child: GoogleMap(
-                    initialCameraPosition: _kGooglePlex,
-                    mapType: MapType.hybrid,
-                    onMapCreated: (GoogleMapController controller) {
-                      _controller.complete(controller);
-                    },
+        child: Directionality(
+          textDirection: TextDirection.rtl,
+          child: AppPadding(
+              padddingValue: 15,
+              child: Column(
+                children: [
+                  const HeaderTitle(
+                    title: "أضف ",
+                    bottomTitle:
+                        "يمكنك تعديل هذا لاحقًا في إعدادات حسابك.",
+                    subtitle: "موقعك",
                   ),
-                ),
-                Gap(isWidth: false, isHeight: true, height: height * 0.04),
-                InkWell(
-                  onTap: () {
-                    Navigator.pushNamed(
-                        context, RoutesName.accountLocationScreen);
-                  },
-                  child: Container(
-                    height: height * 0.08,
-                    decoration: BoxDecoration(
-                        color: AppColors.inputBackground,
-                        borderRadius: BorderRadius.circular(15)),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: [
-                        Row(
-                          children: [
-                            const Gap(
-                                isWidth: true, isHeight: false, width: 10),
-                            const Icon(
-                              Icons.location_pin,
-                              color: AppColors.textPrimary,
-                              size: 20,
-                            ),
-                            const Gap(
-                                isWidth: true, isHeight: false, width: 10),
-                            Text(
-                              "Location details",
-                              style: Theme.of(context)
-                                  .textTheme
-                                  .titleMedium!
-                                  .copyWith(color: AppColors.textPrimary),
-                            )
-                          ],
-                        ),
-                        Row(
-                          children: const [
-                            Icon(
-                              Icons.chevron_right_sharp,
-                              color: AppColors.textPrimary,
-                            ),
-                            Gap(isWidth: true, isHeight: false, width: 10),
-                          ],
-                        )
-                      ],
+                  Gap(isWidth: false, isHeight: true, height: height * 0.03),
+                  Container(
+                    width: double.infinity,
+                    height: height * 0.35,
+                    decoration:
+                        BoxDecoration(borderRadius: BorderRadius.circular(15)),
+                    child: GoogleMap(
+                      initialCameraPosition: _kGooglePlex,
+                      mapType: MapType.hybrid,
+                      onMapCreated: (GoogleMapController controller) {
+                        _controller.complete(controller);
+                      },
                     ),
                   ),
-                ),
-                Gap(isWidth: false, isHeight: true, height: height * 0.1),
-                AppButton(
-                  onPress: () {
-                    Navigator.pushNamed(context, RoutesName.galleryGridView);
-                  },
-                  title: "Next",
-                  textColor: AppColors.whiteColor,
-                  height: 60,
-                )
-              ],
-            )),
+                  Gap(isWidth: false, isHeight: true, height: height * 0.04),
+                  InkWell(
+                    onTap: () {
+                      Navigator.pushNamed(
+                          context, RoutesName.accountLocationScreen);
+                    },
+                    child: Container(
+                      height: height * 0.08,
+                      decoration: BoxDecoration(
+                          color: AppColors.inputBackground,
+                          borderRadius: BorderRadius.circular(15)),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
+                          Row(
+                            children: [
+                              const Gap(
+                                  isWidth: true, isHeight: false, width: 10),
+                              const Icon(
+                                Icons.location_pin,
+                                color: AppColors.textPrimary,
+                                size: 20,
+                              ),
+                              const Gap(
+                                  isWidth: true, isHeight: false, width: 10),
+                              Text(
+                                "تفاصيل الموقع",
+                                style: Theme.of(context)
+                                    .textTheme
+                                    .titleMedium!
+                                    .copyWith(color: AppColors.textPrimary),
+                              )
+                            ],
+                          ),
+                          Row(
+                            children: const [
+                              Icon(
+                                Icons.chevron_right_sharp,
+                                color: AppColors.textPrimary,
+                              ),
+                              Gap(isWidth: true, isHeight: false, width: 10),
+                            ],
+                          )
+                        ],
+                      ),
+                    ),
+                  ),
+                  Gap(isWidth: false, isHeight: true, height: height * 0.1),
+                  AppButton(
+                    onPress: () {
+                      Navigator.pushNamed(context, RoutesName.galleryGridView);
+                    },
+                    title: "التالي",
+                    textColor: AppColors.whiteColor,
+                    height: 60,
+                  )
+                ],
+              )),
+        ),
       ),
     );
   }

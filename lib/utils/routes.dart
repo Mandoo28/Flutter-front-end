@@ -17,7 +17,6 @@ import '../screens/login_screen.dart';
 import '../screens/onboarding_screen.dart';
 import '../screens/otp_screen.dart';
 import '../screens/promotion/promotion_screen.dart';
-import '../screens/search_screen.dart';
 import '../screens/signup_screen.dart';
 import '../screens/splash_screen.dart';
 import '../screens/started_screen.dart';
@@ -66,8 +65,6 @@ class Routes {
         return MaterialPageRoute(builder: (context) => const HomeScreen());
       case RoutesName.authScreen:
         return MaterialPageRoute(builder: (context) => const DashboardScreen());
-      case RoutesName.searchScreen:
-        return MaterialPageRoute(builder: (context) => const SearchScreen());
       case RoutesName.favoriteScreen:
         return MaterialPageRoute(builder: (context) => const FavouriteScreen());
       case RoutesName.promotionScreem:

@@ -104,7 +104,7 @@ class FeaturedCard extends StatelessWidget {
                         fontWeight: FontWeight.bold),
                   ),
                   Text(
-                    "month",
+                    "شهر",
                     style: Theme.of(context).textTheme.headlineMedium!.copyWith(
                         color: AppColors.textPrimary,
                         fontSize: 14,

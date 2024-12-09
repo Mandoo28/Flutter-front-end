@@ -21,25 +21,28 @@ class _SignupScreenState extends State<SignupScreen> {
         elevation: 0,
       ),
       body: SafeArea(
-        child: AppPadding(
-            padddingValue: 15,
-            child: SingleChildScrollView(
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.start,
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Gap(isWidth: false, isHeight: true, height: height * 0.01),
-                  const HeaderTitle(
-                    title: "Create your ",
-                    bottomTitle:
-                        "quis nostrud exercitation ullamco laboris nisi ut.",
-                    subtitle: "account",
-                  ),
-                  Gap(isWidth: false, isHeight: true, height: height * 0.04),
-                  SignupForm()
-                ],
-              ),
-            )),
+        child: Directionality(
+          textDirection: TextDirection.rtl,
+          child: AppPadding(
+              padddingValue: 15,
+              child: SingleChildScrollView(
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Gap(isWidth: false, isHeight: true, height: height * 0.01),
+                    const HeaderTitle(
+                      title: "انشاء ",
+                      bottomTitle:
+                          "",
+                      subtitle: "حساب",
+                    ),
+                    Gap(isWidth: false, isHeight: true, height: height * 0.01),
+                    SignupForm()
+                  ],
+                ),
+              )),
+        ),
       ),
     );
   }

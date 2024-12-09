@@ -60,15 +60,7 @@ class _OtpCardState extends State<OtpCard> {
                 child: Pinput(
                   controller: pinController,
                   focusNode: focusNode,
-                  androidSmsAutofillMethod:
-                      AndroidSmsAutofillMethod.smsUserConsentApi,
-                  listenForMultipleSmsOnAndroid: true,
                   defaultPinTheme: defaultPinTheme,
-                  validator: (value) {
-                    return value == '2222'
-                        ? null
-                        : 'Pin is incorrect. correct pin is 2222';
-                  },
                   // onClipboardFound: (value) {
                   //   debugPrint('onClipboardFound: $value');
                   //   pinController.setText(value);
@@ -115,7 +107,7 @@ class _OtpCardState extends State<OtpCard> {
                   formKey.currentState!.validate();
                   Navigator.pushNamed(context, RoutesName.accountEmptyScreen);
                 },
-                title: 'Validate',
+                title: 'التحقق',
                 textColor: AppColors.whiteColor,
               ),
               Gap(isWidth: false, isHeight: true, height: height * 0.3),
@@ -124,13 +116,13 @@ class _OtpCardState extends State<OtpCard> {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   Text(
-                    "Didn’t receive the OTP? ",
+                    "لم استلم OTP? ",
                     style: Theme.of(context).textTheme.titleMedium,
                   ),
                   InkWell(
                     onTap: () {},
                     child: Text(
-                      "Resend OTP",
+                      "إعادة الإرسال OTP",
                       style: Theme.of(context).textTheme.titleMedium!.copyWith(
                           color: AppColors.textPrimary,
                           fontWeight: FontWeight.bold),

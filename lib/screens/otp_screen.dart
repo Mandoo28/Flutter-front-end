@@ -21,26 +21,29 @@ class _OtpScreenState extends State<OtpScreen> {
         elevation: 0,
       ),
       body: SafeArea(
-        child: AppPadding(
-            padddingValue: 15,
-            child: SingleChildScrollView(
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.start,
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Gap(isWidth: false, isHeight: true, height: height * 0.01),
-                  HeaderTitle(
-                    title: "Enter the ",
-                    bottomTitle: "Enter the 4 digit code that we just sent to",
-                    isBottomTitle: true,
-                    bottomTitle2: widget.data['email'],
-                    subtitle: "code",
-                  ),
-                  Gap(isWidth: false, isHeight: true, height: height * 0.09),
-                  const OtpCard()
-                ],
-              ),
-            )),
+        child: Directionality(
+          textDirection: TextDirection.rtl,
+          child: AppPadding(
+              padddingValue: 15,
+              child: SingleChildScrollView(
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Gap(isWidth: false, isHeight: true, height: height * 0.01),
+                    HeaderTitle(
+                      title: "ادخل ",
+                      bottomTitle: "أدخل الرمز المكون من 4 أرقام الذي أرسلناه إليك للتو",
+                      isBottomTitle: true,
+                      bottomTitle2: widget.data['email'],
+                      subtitle: "الكود",
+                    ),
+                    Gap(isWidth: false, isHeight: true, height: height * 0.09),
+                    const OtpCard()
+                  ],
+                ),
+              )),
+        ),
       ),
     );
   }

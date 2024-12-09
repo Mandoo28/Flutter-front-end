@@ -53,14 +53,14 @@ class _SignupFormState extends State<SignupForm> {
                   keyBoardType: TextInputType.text,
                   obscureText: false,
                   isFilled: true,
-                  hinit: "Enter fullname",
+                  hinit: "أدخل الاسم الكامل",
                   leftIcon: true,
                   icon: const Icon(Icons.man),
                   onValidator: (value) {
                     if (value.isEmpty)
-                      return 'Enter fullname';
+                      return "أدخل الاسم الكامل";
                     else if (value.length < 3)
-                      return "Full name at least 3 characters";
+                      return "الاسم الكامل يتكون من 3 أحرف على الأقل";
                   }),
               Gap(isWidth: false, isHeight: true, height: height * 0.019),
               AppInput(
@@ -72,14 +72,14 @@ class _SignupFormState extends State<SignupForm> {
                   keyBoardType: TextInputType.emailAddress,
                   obscureText: false,
                   isFilled: true,
-                  hinit: "Enter Email",
+                  hinit: "أدخل البريد الإلكتروني",
                   leftIcon: true,
                   icon: const Icon(Icons.email),
                   onValidator: (value) {
                     if (value.isEmpty)
-                      return 'Enter email';
+                      return 'أدخل البريد الإلكتروني';
                     else if (!helper.emailValid(value))
-                      return "Enter invalid email";
+                      return "أدخل بريدًا إلكترونيًا غير صالح";
                   }),
               Gap(isWidth: false, isHeight: true, height: height * 0.019),
               AppInput(
@@ -90,15 +90,15 @@ class _SignupFormState extends State<SignupForm> {
                   },
                   keyBoardType: TextInputType.text,
                   obscureText: true,
-                  hinit: "Enter Password",
+                  hinit: "أدخل كلمة المرور",
                   leftIcon: true,
                   icon: const Icon(Icons.lock),
                   isFilled: true,
                   onValidator: (value) {
                     if (value.isEmpty)
-                      return 'Enter Password';
+                      return "أدخل كلمة المرور";
                     else if (value.length < 4)
-                      return "Password at least 6 characters ";
+                      return "كلمة المرور يجب أن تتكون من 6 أحرف على الأقل";
                   }),
             ],
           ),
@@ -112,7 +112,7 @@ class _SignupFormState extends State<SignupForm> {
               _formkey.currentState!.reset();
             }
           },
-          title: "Register",
+          title: "انشاء حساب",
           height: 63,
           textColor: AppColors.whiteColor,
         )

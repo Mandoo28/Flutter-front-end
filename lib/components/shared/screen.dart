@@ -30,7 +30,7 @@ class Screen extends StatelessWidget {
                           Navigator.pushNamed(
                               context, RoutesName.userAccountScreen);
                         },
-                        title: "Next",
+                        title: "التالي",
                         width: 100,
                         isMarginLeft: true,
                         bgColor: AppColors.primaryColor,
